@@ -1,0 +1,58 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: black;
+    color: #FFA500;
+    font-family: 'Oxygen', sans-serif;
+    /*font-family: 'Julius Sans One', sans-serif;*/
+}
+
+.burrito {
+    border: 2px solid #FFA500;
+    border-radius: 3px;
+
+    width: 600px;
+    height: 200px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -300px;
+}
+
+.title {
+    /*height: 60px;*/
+    width: 600px;
+
+    /*
+    position: fixed;
+    top: 50%;
+    margin-top: -30px;
+    */
+    top: 30px;
+
+    text-align: center;
+}
+
+.subtitle {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #FFA500;
+}
+
+.outgoing {
+    position: absolute;
+    bottom: 8px;
+}
