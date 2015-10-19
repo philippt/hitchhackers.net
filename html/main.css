@@ -8,35 +8,28 @@ html {
 
 body {
     background-color: black;
-    color: #FFA500;
+    color: #C88700;
     font-family: 'Oxygen', sans-serif;
-    /*font-family: 'Julius Sans One', sans-serif;*/
 }
 
 .burrito {
-    border: 2px solid #FFA500;
+    border: 3px solid #C88700;
     border-radius: 3px;
-
-    width: 600px;
-    height: 200px;
 
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-top: -100px;
-    margin-left: -300px;
+
+    width: 500px;
+    height: 150px;
+    margin-top: -75px;
+    margin-left: -250px;
 }
 
 .title {
-    /*height: 60px;*/
-    width: 600px;
-
-    /*
-    position: fixed;
-    top: 50%;
-    margin-top: -30px;
-    */
+    width: 500px;
     top: 30px;
+    margin-top: 30px;
 
     text-align: center;
 }
@@ -49,10 +42,21 @@ body {
 
 a, a:visited {
     text-decoration: none;
-    color: #FFA500;
+    color: #C88700;
 }
 
 .outgoing {
     position: absolute;
     bottom: 8px;
+
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.outgoing_right {
+    position: absolute;
+    bottom: 8px;
+    right: 0px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
