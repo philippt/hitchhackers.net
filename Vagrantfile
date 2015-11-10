@@ -5,7 +5,7 @@
 VAGRANTFILE_API_VERSION = "2"
 ENV['VAGRANT_DEFAULT_PROVIDER'] = 'libvirt'
 
-VM_NAME="hitchhackers"
+VM_NAME="hitchhackers.localnet"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "debian82"
@@ -14,6 +14,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, path: "bootstrap/debian.sh", run: "always" #, args: [VM_NAME]
 
   config.vm.provision :ansible do |ansible|
-    ansible.playbook = "site.yml"
+    ansible.playbook = "bootstrap/ansible.yml"
+    ansible.extra_vars = {
+      #domain: "hitchhackers.localnet"
+      domain: VM_NAME
+    }
   end
 end

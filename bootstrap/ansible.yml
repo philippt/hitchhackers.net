@@ -1,0 +1,14 @@
+---
+- hosts: all
+  remote_user: vagrant
+  sudo: true
+  vars:
+    #domain: hitchhackers.localnet
+    apache_vhosts:
+      - server_name: "{{ domain }}"
+        serveralias: "www.{{ domain }}"
+        server_admin: philipp@hitchhackers.net
+        document_root: "/vagrant/html"
+        create_index: false
+  roles:
+    - { role: "weldpua2008.apache" }
