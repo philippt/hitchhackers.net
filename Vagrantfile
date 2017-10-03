@@ -16,7 +16,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :ansible do |ansible|
     ansible.playbook = "bootstrap/ansible.yml"
     ansible.extra_vars = {
-      #domain: "hitchhackers.localnet"
       domain: VM_NAME
     }
   end
